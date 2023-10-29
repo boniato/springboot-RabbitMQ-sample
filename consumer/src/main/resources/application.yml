@@ -1,0 +1,14 @@
+server:
+  port: 8092
+spring:
+  rabbitmq:
+    address: 127.0.0.1:5672 # You can add server addresses like this : host1:port,host2:port
+    host: localhost
+    port: 5672
+    virtual-host: vhost-01
+    username: test-admin
+    password: password!
+rabbitmq:
+  exchange: exchange.event.keyword
+  binding: bind.event.keyword
+  queue: event.keyword.update.active
